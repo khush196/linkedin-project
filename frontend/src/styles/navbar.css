@@ -1,0 +1,30 @@
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between; /* Distribute logo and links */
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.2em; /* Smaller font size */
+    font-weight: bold;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Make navigation items horizontal */
+  }
+  
+  nav li {
+    margin-left: 20px; /* Add spacing between items */
+  }
+  
+  nav a {
+    color: white;
+    font-size: 1em; /* Smaller font size */
+    text-decoration: none;
+  }

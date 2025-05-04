@@ -1,0 +1,13 @@
+.message-generator-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.message-container {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 80%; /* Adjust width as needed */
+}

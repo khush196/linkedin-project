@@ -1,0 +1,19 @@
+.landing-page {
+    text-align: center;
+    padding: 40px 0;
+  }
+  
+  .landing-page h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  
+  .landing-page p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+  }
+  
+  .features ul {
+    list-style: disc;
+    padding-left: 20px;
+  }

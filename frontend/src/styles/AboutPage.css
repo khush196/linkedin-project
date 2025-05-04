@@ -1,0 +1,13 @@
+.about-page {
+    padding: 20px;
+    text-align: center; /* Center the content */
+  }
+  
+  .about-page h1 {
+    margin-bottom: 20px;
+  }
+  
+  .about-page p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
