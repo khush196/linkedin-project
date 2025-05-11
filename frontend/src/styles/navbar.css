@@ -118,7 +118,5 @@
     padding: 0 15px; /* Adjust padding for smaller screens */
   }
   /* If you had direct links other than logo and profile/menu, hide them */
-  .main-navbar ul:not(.navbar-menu-dropdown ul) { 
-    /* display: none; */ /* Example if you had other ul elements */
-  }
+  /* Removed empty ruleset to fix the error */
 }
