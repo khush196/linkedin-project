@@ -1,30 +1,124 @@
-nav {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-between; /* Distribute logo and links */
-    align-items: center;
+.main-navbar {
+  background-color: #ffffff; /* White background for a modern look */
+  color: #333;
+  padding: 0 25px; /* Horizontal padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px; /* Fixed height */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07); /* Subtle shadow */
+  position: sticky; /* Make navbar sticky */
+  top: 0;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.navbar-logo {
+  font-size: 1.5em; /* Larger logo text */
+  font-weight: 700; /* Bold */
+}
+
+.navbar-logo a {
+  color: #2c3e50; /* Logo color */
+  text-decoration: none;
+}
+
+.navbar-right-section {
+  display: flex;
+  align-items: center;
+  position: relative; /* For dropdown positioning */
+}
+
+.navbar-user-profile {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Space between profile and menu button */
+  color: #007bff; /* Or your theme color */
+  cursor: pointer; /* If it's clickable */
+}
+
+.navbar-user-profile svg { /* Styling for the placeholder icon */
+  border-radius: 50%;
+  padding: 2px;
+  background-color: #e9ecef; /* Light background for icon */
+}
+
+.username-display {
+  margin-left: 8px;
+  font-weight: 500;
+}
+
+.navbar-menu-toggle {
+  background: none;
+  border: none;
+  color: #333; /* Icon color */
+  cursor: pointer;
+  padding: 8px; /* Clickable area */
+  display: flex; /* Aligns icon nicely */
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-menu-toggle svg {
+  width: 28px;
+  height: 28px;
+}
+
+.navbar-menu-dropdown {
+  position: absolute;
+  top: calc(100% + 10px); /* Position below the navbar with a small gap */
+  right: 0;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  min-width: 220px; /* Minimum width of the dropdown */
+  z-index: 1001; /* Above navbar shadow */
+  border: 1px solid #e9ecef; /* Light border */
+  overflow: hidden; /* For rounded corners on items */
+}
+
+.navbar-menu-dropdown ul {
+  list-style: none;
+  padding: 10px 0; /* Padding inside the dropdown */
+  margin: 0;
+}
+
+.navbar-menu-dropdown li a {
+  display: block;
+  padding: 12px 20px; /* Padding for links */
+  color: #333;
+  text-decoration: none;
+  font-size: 0.95em;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navbar-menu-dropdown li a:hover {
+  background-color: #f0f4f8; /* Hover background */
+  color: #007bff; /* Hover text color */
+}
+
+.menu-features-header {
+  padding: 10px 20px 5px;
+  font-size: 0.8em;
+  color: #6c757d; /* Grey color for header */
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.menu-divider {
+  border: none;
+  border-top: 1px solid #e9ecef; /* Light divider */
+  margin: 8px 0;
+}
+
+/* Hide full text links for smaller screens if you had them before,
+   this example relies on the dropdown primarily for navigation */
+@media (max-width: 768px) {
+  .main-navbar {
+    padding: 0 15px; /* Adjust padding for smaller screens */
   }
-  
-  .logo {
-    font-size: 1.2em; /* Smaller font size */
-    font-weight: bold;
+  /* If you had direct links other than logo and profile/menu, hide them */
+  .main-navbar ul:not(.navbar-menu-dropdown ul) { 
+    /* display: none; */ /* Example if you had other ul elements */
   }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex; /* Make navigation items horizontal */
-  }
-  
-  nav li {
-    margin-left: 20px; /* Add spacing between items */
-  }
-  
-  nav a {
-    color: white;
-    font-size: 1em; /* Smaller font size */
-    text-decoration: none;
-  }
+}

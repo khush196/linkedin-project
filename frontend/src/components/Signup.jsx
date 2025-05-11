@@ -9,7 +9,7 @@ function Signup() {
     password: '',
   });
 
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // Used for redirection
 
   const handleChange = (e) => {
     setFormData((prev) => ({
@@ -21,19 +21,37 @@ function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('/api/auth/signup', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
+      // --- THIS IS YOUR MOCK API CALL ---
+      // In a real app, you'd send a request to your backend here.
+      // For example:
+      // const response = await fetch('/api/auth/signup', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(formData),
+      // });
 
-      if (response.ok) {
-        navigate('/login'); // redirect to login page
+      // Simulate a successful API response for demonstration
+      const mockApiResponse = { ok: true, status: 201 }; // Simulate success (201 Created)
+      // const mockApiResponse = { ok: false, status: 400 }; // Simulate failure (e.g., email already exists)
+      
+      console.log('Attempting signup with:', formData);
+
+      if (mockApiResponse.ok) {
+        // Successful signup
+        console.log('Signup successful, navigating to /login');
+        alert('Signup successful! Please log in.'); // Optional: give user feedback
+        navigate('/login'); // <<< --- REDIRECTION TO LOGIN PAGE ---
       } else {
+        // Signup failed
         alert('Signup failed. Please try again.');
+        // You might want to parse an error message from the response if your API provides one
+        // const errorData = await response.json();
+        // alert(`Signup failed: ${errorData.message || 'Please try again.'}`);
+        console.log('Signup failed');
       }
     } catch (error) {
       console.error('Signup error:', error);
+      alert('An error occurred during signup. Please try again.');
     }
   };
 

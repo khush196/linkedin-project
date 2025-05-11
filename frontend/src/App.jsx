@@ -9,7 +9,7 @@ import MessageGeneratorPage from './components/MessageGeneratorPage';
 import AboutPage from './components/AboutPage'; // Import AboutPage
 import ContactPage from './components/ContactPage'; // Import ContactPage
 import PricingPage from './components/PricingPage'; // Import PricingPage
-
+import UserProfilePage from './components/UserProfilePage'; 
 import './index.css';
 
 
@@ -27,6 +27,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} /> {/* Add About route */}
           <Route path="/contact" element={<ContactPage />} /> {/* Add Contact route */}
           <Route path="/pricing" element={<PricingPage />} /> {/* Add Pricing route */}
+            <Route path="/profile" element={<UserProfilePage />} />
       
         </Routes>
       </div>
